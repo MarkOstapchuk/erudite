@@ -9,6 +9,8 @@ uses
   Windows;
 
 begin
-  
+  setConsoleCP(1251);
+  setConsoleOutputCP(1251);
+  writeln('аллв');
   readln;
 end.
