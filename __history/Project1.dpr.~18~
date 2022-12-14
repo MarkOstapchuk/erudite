@@ -3,14 +3,13 @@ uses
   System.SysUtils,
   Windows;
 const vowel = ['a', 'e', 'i', 'o', 'u','y'];
-const numOfLetters = 128;
 type
- Tletters = array[1..numOfLetters] of char;
+ Tletters = array[1..128] of char;
 var letters: Tletters;
+alphabet:char;
 i:integer;
 procedure setLetters(var letters: Tletters);
 var i,k:integer;
-alphabet:char;
 begin
 k:=1;
 for alphabet := 'a' to 'z' do
@@ -34,7 +33,7 @@ for alphabet := 'a' to 'z' do
 end;
 begin
 setLetters(letters);
-for i := 1 to numOfLetters do
+for i := 1 to 128 do
     write(letters[i],' ');
 readln;
 end.
